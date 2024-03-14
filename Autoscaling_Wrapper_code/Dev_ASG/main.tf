@@ -1,4 +1,4 @@
-module "ASG" {
+module "Dev_ASG" {
 source                              = "git::https://github.com/CodeOps-Hub/Terraform-modules/tree/main/Auto_Sacling_Module"
 #---------------------------------Security Group ----------------------------------#
 security_name                       = var.Dev_security_name
