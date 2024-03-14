@@ -3,12 +3,12 @@
 variable "QA_Frontend_security_name" {
   description     = "Name tag for the security group"
   type            = string
-  default         = "QA_Frontend-Frontend-sg"
+  default         = "QA-Frontend-sg"
 }
 variable "QA_Frontend_security_description" {
   description     = "Description for the security group"
   type            = string
-  default         = "Security group for QA_Frontend-Frontend-API"
+  default         = "Security group for QA-Frontend-Frontend-API"
 }
 variable "QA_Frontend_SG_vpc_id" {
   description     = "ID of the VPC for instances"
@@ -21,7 +21,7 @@ variable "QA_Frontend_inbound_ports" {
   default         = [
     { port = 22, protocol = "tcp",cidr_blocks = "10.0.1.0/24" }, # Management VPC Cidr Block
     { port = 22, protocol = "tcp", security_group_ids = "sg-0f470a22a92136557" },    # OpenVPN-SG
-    { port = 3000, protocol = "tcp", security_group_ids = "sg-0b426399b2b19b0ae" }, #  QA_Frontend-Frontend-lb-sg ID 
+    { port = 3000, protocol = "tcp", security_group_ids = "sg-0b426399b2b19b0ae" }, #  QA-Frontend-lb-sg ID 
   ]
 }
 variable "QA_Frontend_outbound_ports" {
@@ -35,7 +35,7 @@ variable "QA_Frontend_Sg_tags" {
   description     = "Tags for Security Group"
   type            = map(string)
   default         = {
-    Name          = "QA_Frontend-Frontend-sg"
+    Name          = "QA-Frontend-sg"
     Enviroment    = "QA_Frontend"
     Owner         = "Vishal"
   }
@@ -60,17 +60,17 @@ variable "QA_Frontend_private_key_rsa_bits" {
 variable "QA_Frontend_template_name" {
   description     = "Launch Template Name"
   type            = string
-  default         = "QA_Frontend-Frontend-template"  
+  default         = "QA-Frontend-template"  
 }
 variable "QA_Frontend_template_description" {
   description     = "Launch Template Description"
   type            = string
-  default         = "Template for QA_Frontend-Frontend"  
+  default         = "Template for QA-Frontend"  
 }
 variable "QA_Frontend_AMI_ID" {
   description     = "Instance AMI ID"
   type            = string
-  default         = "ami-0c335502f397b30c6" # QA_Frontend-Frontend Setup AMI ID
+  default         = "ami-0c335502f397b30c6" # QA-Frontend Setup AMI ID
 }
 variable "QA_Frontend_instance_type" {
   description     = "Launch Template Instance Type"
@@ -90,7 +90,7 @@ variable "QA_Frontend_subnet_ID" {
 variable "QA_Frontend_user_data_script_path" {
   description = "Path to the user data script file"
   type        = string
-  default     = "./script.sh"  # Path QA_Frontend-Frontend User data Script
+  default     = "./script.sh"  # Path QA-Frontend User data Script
 }
 
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
@@ -99,7 +99,7 @@ variable "QA_Frontend_user_data_script_path" {
 variable "QA_Frontend_target_group_name" {
   description     = "Name of the target group"
   type            = string
-  default         = "QA_Frontend-Frontend-TG"
+  default         = "QA-Frontend-TG"
 }
 variable "QA_Frontend_target_group_port" {
   description     = "Port for the target group"
