@@ -1,6 +1,5 @@
 module "Dev_Frontend_ASG" {
-# source                              = "git::https://github.com/CodeOps-Hub/Terraform-modules/tree/main/Auto_Sacling_Module"
-source                              = "git::https://Vishalkk1998:Vishal-PAT-DSL@github.com/CodeOps-Hub/Terraform-modules.git//Auto_Scaling_Module?ref=main"
+source                              = "git::https://<username>:<token>@github.com/CodeOps-Hub/Terraform-modules.git//Auto_Sacling_Module?ref=main"
 #---------------------------------Security Group ----------------------------------#
 security_name                       = var.Dev_Frontend_security_name
 Security_description                = var.Dev_Frontend_security_description
