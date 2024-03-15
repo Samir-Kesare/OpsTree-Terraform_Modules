@@ -1,5 +1,5 @@
 module "network" {
-    source                         = "./networking"
+    source                         = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Network_Skeleton_Module?ref=main"
     region                         = var.region
     vpc_cidr                       = var.vpc_cidr
     vpc_tags                       = var.vpc_tags
