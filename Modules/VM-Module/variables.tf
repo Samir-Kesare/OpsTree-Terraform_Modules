@@ -18,6 +18,7 @@ variable "inbound_ports" {
   type            = list(map(any))
   default         = [
     { port = 22, protocol = "tcp",cidr_blocks = "20.0.0.0/28" }, 
+    { port = 22, protocol = "TCP", security_group_ids = "sg-051aa66773d7b86c9" },
   ]
 }
 
