@@ -1,4 +1,4 @@
-module "ASG" {
+module "QA_Frontend" {
 source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
 #---------------------------------Security Group ----------------------------------#
 security_name                       = var.QA_Frontend_security_name
