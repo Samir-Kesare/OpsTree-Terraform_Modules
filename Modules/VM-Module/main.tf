@@ -1,11 +1,6 @@
 
 # Security Group #
 locals {
-  inbound_ports         = var.inbound_ports
-  outbound_ports        = var.outbound_ports
-}
-# Security Group #
-locals {
   inbound_ports  = var.inbound_ports
   outbound_ports = var.outbound_ports
 }
