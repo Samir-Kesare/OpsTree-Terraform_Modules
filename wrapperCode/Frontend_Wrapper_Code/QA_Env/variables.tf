@@ -180,6 +180,11 @@ variable "QA_Frontend_autoscaling_group_name" {
   default         = "QA_Frontend_ASG"
 }
 
+variable "QA_Frontend_ASG_vserion" {
+  description     = "Give the Version"
+  type            = string
+  default         = "$Latest"
+}
 variable "QA_Frontend_min_size" {
   description     = "The minimum number of instances in the ASG"
   type            = number
