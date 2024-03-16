@@ -179,6 +179,11 @@ variable "Dev_Frontend_autoscaling_group_name" {
   type            = string
   default         = "Dev-Frontend_ASG"
 }
+variable "Dev_Frontend_ASG_vserion" {
+  description     = "Give the Version"
+  type            = string
+  default         = "$Latest"
+}
 
 variable "Dev_Frontend_min_size" {
   description     = "The minimum number of instances in the ASG"
