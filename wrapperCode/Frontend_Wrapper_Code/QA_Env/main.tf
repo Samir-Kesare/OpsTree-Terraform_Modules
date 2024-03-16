@@ -1,4 +1,4 @@
-module "QA_Frontend_ASG" {
+module "ASG" {
 source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
 #---------------------------------Security Group ----------------------------------#
 security_name                       = var.QA_Frontend_security_name
@@ -39,8 +39,19 @@ priority                             = var.QA_Frontend_priority
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #--------------------------Configure Auto Scaling group ---------------------------#
 autoscaling_group_name              = var.QA_Frontend_autoscaling_group_name
+ASG_version                         = var.QA_Frontend_ASG_vserion
+subnet_ids                          = var.QA_Frontend_subnet_ids
+tag_key                             = var.QA_Frontend_tag_key
+tag_value                           = var.QA_Frontend_tag_value
+propagate_at_launch                 = var.QA_Frontend_propagate_at_launch
 min_size                            = var.QA_Frontend_min_size
 max_size                            = var.QA_Frontend_max_size
 desired_capacity                    = var.QA_Frontend_desired_capacity
-}
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
+#---------------------------- Auto Scaling Policies -------------------------------#
+scaling_policy_name                 = var.QA_Frontend_scaling_policy_name
+policy_type                         = var.QA_Frontend_policy_type
+predefined_metric_type              = var.QA_Frontend_predefined_metric_type
+target_value                        = var.QA_Frontend_target_value
+#-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
+}
