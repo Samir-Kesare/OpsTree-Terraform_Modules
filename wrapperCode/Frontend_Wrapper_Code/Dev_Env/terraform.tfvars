@@ -56,6 +56,7 @@ Dev_Frontend_priority                              = 100
 #--------------------------Configure Auto Scaling group ---------------------------#
 
 Dev_Frontend_autoscaling_group_name              = "Dev-Frontend_ASG"
+Dev_Frontend_ASG_vserion                         = "$Latest"
 Dev_Frontend_min_size                            = 1
 Dev_Frontend_max_size                            = 2
 Dev_Frontend_desired_capacity                    = 1
