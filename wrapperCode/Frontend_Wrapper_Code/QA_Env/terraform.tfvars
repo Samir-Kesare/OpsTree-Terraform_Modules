@@ -56,6 +56,7 @@ QA_Frontend_priority                              = 100
 #--------------------------Configure Auto Scaling group ---------------------------#
 
 QA_Frontend_autoscaling_group_name              = "QA-Frontend-ASG"
+QA_Frontend_ASG_vserion                         = "$Latest"
 QA_Frontend_min_size                            = 1
 QA_Frontend_max_size                            = 2
 QA_Frontend_desired_capacity                    = 1
