@@ -1,5 +1,6 @@
+#---------------------------------Security Group ----------------------------------#
 module "Dev_Salary" {
-source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"#---------------------------------Security Group ----------------------------------#
+source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
 security_name                       = var.Dev_Salary_security_name
 Security_description                = var.Dev_Salary_security_description
 SG_vpc_id                           = var.Dev_Salary_SG_vpc_id
