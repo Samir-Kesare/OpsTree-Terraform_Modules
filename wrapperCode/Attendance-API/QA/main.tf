@@ -1,5 +1,5 @@
 #---------------------------------Security Group ----------------------------------#
-module "Dev_Attendance" {
+module "QA_Attendance" {
   source               = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
   security_name        = var.security_name
   Security_description = var.security_description
