@@ -5,7 +5,7 @@ security_description = "Security group for Dev Attendance API"
 vpc_id               = "vpc-0d744158f7f47f419" #Dev_Salary-VPC-ID
 inbound_ports = [
   { port = 22, protocol = "tcp", cidr_blocks = "20.0.0.0/28" },                   # Management VPC Cidr Block
-  { port = 22, protocol = "tcp", security_group_ids = "sg-061f905ed2cbb0652" },   #  Dev-Salary-lb-sg ID
+  { port = 22, protocol = "tcp", security_group_ids = "sg-061f905ed2cbb0652" },   #  Dev-Attendance-lb-sg ID
   { port = 8080, protocol = "tcp", security_group_ids = "sg-061f905ed2cbb0652" }, # OpenVPN-SG
 ]
 outbound_ports = [
@@ -58,7 +58,7 @@ ASG_version            = "$Latest"
 min_size               = 1
 max_size               = 2
 desired_capacity       = 1
-subnet_ids             = ["subnet-0a712151efeb16f4f"] #Dev-Salary Pvt ID
+subnet_ids             = ["subnet-0a712151efeb16f4f"] #Dev-Attendance Pvt ID
 tag_key                = "Name"
 tag_value              = "Dev-Attendance_ASG"
 propagate_at_launch    = false
