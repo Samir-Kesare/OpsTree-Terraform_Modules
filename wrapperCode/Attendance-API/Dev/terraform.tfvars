@@ -2,7 +2,7 @@
 
 security_name        = "Dev-Attendance-sg"
 security_description = "Security group for Dev Attendance API"
-vpc_id               = "vpc-0d744158f7f47f419" #Dev_Salary-VPC-ID
+vpc_id               = "vpc-0d744158f7f47f419" #Dev_Attendance-VPC-ID
 inbound_ports = [
   { port = 22, protocol = "tcp", cidr_blocks = "20.0.0.0/28" },                   # Management VPC Cidr Block
   { port = 22, protocol = "tcp", security_group_ids = "sg-061f905ed2cbb0652" },   #  Dev-Attendance-lb-sg ID
