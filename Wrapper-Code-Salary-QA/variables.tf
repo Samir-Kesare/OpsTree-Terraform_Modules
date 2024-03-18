@@ -153,7 +153,7 @@ variable "QA_Salary_health_check_unhealthy_threshold" {
 variable "QA_Salary_listener_arn" {
   description       = "ARN of the existing listener where the rule will be added"
   type              = string
-  default           = "arn:aws:elasticloadbalancing:us-east-2:975050171850:listener/app/alb/385bb840baa3fc3b/4eebd240281403eb"
+  default           = "arn:aws:elasticloadbalancing:us-east-1:975050171850:listener/app/QA-salary/ec9285e1c6531350/f106938208aa72ac"
 }
 variable "QA_Salary_path_pattern" {
   description       = "Path pattern for the listener rule"
