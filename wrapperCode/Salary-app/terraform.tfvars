@@ -47,7 +47,7 @@ Dev_Salary_health_check_unhealthy_threshold    = 2
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #------------------------------- Listener rule of ALB -----------------------------#
 
-Dev_Salary_listener_arn                          = "arn:aws:elasticloadbalancing:us-east-2:975050171850:listener/app/alb/78ba193068ecdac7/e91f6155c19050d5"
+Dev_Salary_listener_arn                          = "arn:aws:elasticloadbalancing:us-east-2:975050171850:listener/app/Dev-alb/a64550e6f99bcccf/779e64b41c588933"
 Dev_Salary_path_pattern                          = "/api/v1/salary/*"
 Dev_Salary_action_type                           = "forward"
 Dev_Salary_priority                              = 100
