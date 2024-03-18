@@ -11,8 +11,8 @@ output "private-subnets-id" {
   value = module.network.private-subnets-id
 }
 
-output "QA-igw-id" {
-  value = module.network.QA-igw-id
+output "Dev-igw-id" {
+  value = module.network.Dev-igw-id
 }
 
 output "QA-nat-id" {
