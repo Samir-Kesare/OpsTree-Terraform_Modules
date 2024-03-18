@@ -15,41 +15,41 @@ output "dev-igw-id" {
   value = module.network.dev-igw-id
 }
 
-output "QA-nat-id" {
-  value = module.network.QA-nat-id
+output "dev-nat-id" {
+  value = module.network.dev-nat-id
 }
 
-output "QA-public-RTB-id" {
-  value = module.network.QA-public-RTB-id
+output "dev-public-RTB-id" {
+  value = module.network.dev-public-RTB-id
 }
 
-output "QA-private-RTB-id" {
-  value = module.network.QA-private-RTB-id
+output "dev-private-RTB-id" {
+  value = module.network.dev-private-RTB-id
 }
 
-output "QA-frontend-nacl-id" {
-  value = module.network.QA-frontend-nacl-id
+output "dev-frontend-nacl-id" {
+  value = module.network.dev-frontend-nacl-id
 }
 
-output "QA-backend-nacl-id" {
-  value = module.network.QA-backend-nacl-id
+output "dev-backend-nacl-id" {
+  value = module.network.dev-backend-nacl-id
 }
 
-output "QA-db-nacl-id" {
-  value = module.network.QA-db-nacl-id
+output "dev-db-nacl-id" {
+  value = module.network.dev-db-nacl-id
 }
 
 output "alb-sg-id" {
   value = module.network.alb-sg-id  
 }
 
-output "QA-alb-dns" {
-  value = module.network.QA-alb-dns
+output "dev-alb-dns" {
+  value = module.network.dev-alb-dns
 }
 
-output "QA-route53-zone" {
-  value = module.network.QA-route53-zone
+output "dev-route53-zone" {
+  value = module.network.dev-route53-zone
 }
-output "QA-route53-record" {
-  value = module.network.QA-route53-record
+output "dev-route53-record" {
+  value = module.network.dev-route53-record
 }
