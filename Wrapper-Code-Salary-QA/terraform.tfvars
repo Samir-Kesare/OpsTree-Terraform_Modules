@@ -47,7 +47,7 @@ QA_Salary_health_check_unhealthy_threshold    = 2
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #------------------------------- Listener rule of ALB -----------------------------#
 
-QA_Salary_listener_arn                          = "arn:aws:elasticloadbalancing:us-east-2:975050171850:listener/app/alb/385bb840baa3fc3b/4eebd240281403eb"
+QA_Salary_listener_arn                          = "arn:aws:elasticloadbalancing:us-east-1:975050171850:listener/app/QA-salary/ec9285e1c6531350/f106938208aa72ac"
 QA_Salary_path_pattern                          = "/api/v1/salary/*"
 QA_Salary_action_type                           = "forward"
 QA_Salary_priority                              = 100
