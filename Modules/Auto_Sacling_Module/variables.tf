@@ -161,7 +161,7 @@ variable "listener_arn" {
 variable "path_pattern" {
   description       = "Path pattern for the listener rule"
   type              = string
-  default           = "/"   # Give your Path 
+  default           = "*"   # Give your Path 
 }
 variable "action_type" {
   description       = "Path pattern for the listener rule"
