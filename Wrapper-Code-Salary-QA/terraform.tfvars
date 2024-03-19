@@ -34,7 +34,7 @@ QA_Salary_user_data_script_path               = "./script.sh"
 #--------------------------------- Target Group -----------------------------------#
 
 QA_Salary_target_group_name                   = "QA-Salary-TG"
-# QA_Salary_target_group_port                   = 8080
+QA_Salary_target_group_port                   = 8080
 QA_Salary_target_group_protocol               = "HTTP"
 QA_Salary_TG_vpc_id                           = "vpc-00631f1bf6539cb88"   #QA_Salary-VPC-ID
 QA_Salary_health_check_path                   = "/health"
