@@ -44,7 +44,7 @@ QA_Employee_health_check_unhealthy_threshold    = 2
 
 #-------------------------------- Listener rule of ALB ------------------------------#
 
-QA_Employee_listener_arn                          = "arn:aws:elasticloadbalancing:ap-southeast-1:441247711986:listener/app/emp-qa/5349040be9af9780/5b9ebc5375e4a914"
+QA_Employee_listener_arn                          = "arn:aws:elasticloadbalancing:ap-southeast-1:441247711986:listener/app/emp-qa/35838b69cfc8ee74/995c5bfc07cb4270"
 QA_Employee_path_pattern                          = "/api/v1/employee/*"
 QA_Employee_action_type                           = "forward"
 QA_Employee_priority                              = 100
