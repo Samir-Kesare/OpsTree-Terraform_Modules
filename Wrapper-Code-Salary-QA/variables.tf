@@ -205,8 +205,8 @@ variable "QA_Salary_desired_capacity" {
 variable "QA_Salary_subnet_ids" {
   description     = "The list of subnet IDs where the instances will be launched"
   type            = list(string)
-  default         = [ "subnet-03e34296260c1c84d" ]    #Salary-Pvt-Subnet ID
-}
+  default         = [ "subnet-03e34296260c1c84d" ]    
+} #Salary-Pvt-Subnet ID
 
 variable "QA_Salary_tag_key" {
   description     = "The key for the tag to be applied to the ASG and instances"
