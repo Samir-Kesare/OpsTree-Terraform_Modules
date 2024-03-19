@@ -44,7 +44,7 @@ Dev_Employee_health_check_unhealthy_threshold    = 2
 
 #-------------------------------- Listener rule of ALB ------------------------------#
 
-Dev_Employee_listener_arn                          = "arn:aws:elasticloadbalancing:ap-southeast-1:441247711986:listener/app/Dev-Employee/c13ae07d35f81b0c/1af6e0a2492db2a9"
+Dev_Employee_listener_arn                          = "arn:aws:elasticloadbalancing:ap-southeast-1:441247711986:listener/app/dev-emp/c5d5cd8f1477d125/d80f6ffc0490cbbb"
 Dev_Employee_path_pattern                          = "/api/v1/employee/*"
 Dev_Employee_action_type                           = "forward"
 Dev_Employee_priority                              = 100
