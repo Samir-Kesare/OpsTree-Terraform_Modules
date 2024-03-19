@@ -1,6 +1,6 @@
 
 module "Dev_Employee" {
-source                              ="git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
+source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
 
 #----------------------------------Security Group -----------------------------------#
 security_name                       = var.Dev_Employee_security_name
