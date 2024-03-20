@@ -1,5 +1,5 @@
 vpc-id              = "vpc-0a744f2efc4febb2a"
-key-name            = "postgres.pem"
+key-name            = "postgres_QA.pem"
 server-type         = "t2.medium"
 subnet-id           = "subnet-0dc05fffbacb821e8"
 sec-grp-name = "Postgresqll-sg"
