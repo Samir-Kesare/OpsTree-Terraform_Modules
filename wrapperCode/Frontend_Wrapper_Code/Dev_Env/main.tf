@@ -1,5 +1,6 @@
 module "Dev_Frontend" {
-source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"#---------------------------------Security Group ----------------------------------#
+source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
+#---------------------------------Security Group ----------------------------------#
 security_name                       = var.Dev_Frontend_security_name
 Security_description                = var.Dev_Frontend_security_description
 SG_vpc_id                           = var.Dev_Frontend_SG_vpc_id
