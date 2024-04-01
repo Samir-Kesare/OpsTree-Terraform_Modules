@@ -33,27 +33,28 @@ resource "aws_security_group" "sec_grp" {
   tags = var.Sec_grp_tags
 }
 
-/*------------Genrate-Key--------------*/
+
+/*------------Generate SSH Key--------------*/
 resource "tls_private_key" "rsa_4096" {
   algorithm = "RSA"
   rsa_bits  = 4096
 }
 
-/*----------pem Key----------------------*/
+/*----------Create PEM Key----------------------*/
 resource "aws_key_pair" "key_pair" {
   key_name   = var.key_name
   public_key = tls_private_key.rsa_4096.public_key_openssh
 }
 
-/*----------Download Pem Key-------------------*/
+/*----------Download PEM Key-------------------*/
 resource "local_file" "private_key" {
   content  = tls_private_key.rsa_4096.private_key_pem
   filename = var.key_name
 }
 
-/*-----------Server-------------------*/
-
+/*-----------Create EC2 Instance-------------------*/
 resource "aws_instance" "standalone_server" {
+  count                       = var.instance_count
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.server_type
   key_name                    = aws_key_pair.key_pair.key_name
@@ -61,8 +62,8 @@ resource "aws_instance" "standalone_server" {
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.sec_grp.id]
   tags = {
-    Name = var.server_name
-    Type = "dev"
+    Name        = "${var.server_name}-${count.index + 1}"
+    Environment = "dev"
+    Owner       = "shreya"
   }
-
 }
