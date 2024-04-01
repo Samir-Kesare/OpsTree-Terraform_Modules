@@ -60,6 +60,7 @@ variable "subnet_id" {
 variable "server_name" {
   description = "Name tag for the standalone server"
   type        = string
+  default     = "Standalone-Server"
 }
 
 variable "instance_count" {
