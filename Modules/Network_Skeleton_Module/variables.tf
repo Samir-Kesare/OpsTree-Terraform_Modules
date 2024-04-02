@@ -1,12 +1,12 @@
 variable "region" {
   type    = string
-  default = "us-east-2"
+  default = "us-east-1"
 }
 /*---------------vpc variables---------------*/
 
 variable "vpc_cidr" {
   type    = string
-  default = "10.0.1.0/25"
+  default = "10.0.0.0/25"
 }
 
 variable "vpc_enable_dns_support" {
@@ -33,14 +33,14 @@ variable "vpc_tags" {
 variable "public_subnets_cidr" {
   description = "public subnet cidr block"
   type        = list(string)
-  default     = ["10.0.1.0/28", "10.0.1.64/28"]
+  default     = ["10.0.0.0/28", "10.0.0.16/28"]
 
 }
 
 variable "public_subnets_az" {
   description = "public subnet availability zones"
   type        = list(string)
-  default     = ["us-east-2a", "us-east-2b"]
+  default     = ["us-east-1a", "us-east-1b"]
 }
 variable "enable_map_public_ip_on_launch" {
   type    = bool
@@ -66,14 +66,14 @@ variable "public_subnets_tags" {
 variable "private_subnets_cidr" {
   description = "private subnet cidr block"
   type        = list(string)
-  default     = ["10.0.1.16/28", "10.0.1.32/28", "10.0.1.48/28"]
+  default     = ["10.0.0.32/28", "10.0.0.64/27", "10.0.0.96/28"]
 
 }
 
 variable "private_subnets_az" {
   description = "private subnet availability zones"
   type        = string
-  default     = "us-east-2a"
+  default     = "us-east-1a"
 
 }
 
@@ -317,6 +317,24 @@ variable "alb_tags" {
     Owner = "shreya"
   }
 }
+
+/*--------------- Listner ---------------*/
+
+variable "alb_listener_port" {
+  description = "The port on which the ALB listens for incoming traffic."
+  type        = number
+}
+
+variable "alb_listener_protocol" {
+  description = "The protocol for routing traffic to the target."
+  type        = string
+}
+
+# # variable "alb_listener_ssl_policy" {
+#   description = "The SSL policy associated with the listener."
+#   type        = string
+# }
+
 
 /*--------------- Route 53 ---------------*/
 
