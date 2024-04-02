@@ -250,6 +250,25 @@ resource "aws_lb" "dev_alb" {
   tags = var.alb_tags
 }
 
+/*--------------- ALB Listener ---------------*/
+
+resource "aws_lb_listener" "dev_alb_listener" {
+  load_balancer_arn = aws_lb.dev_alb.arn
+  port              = var.alb_listener_port
+  protocol          = var.alb_listener_protocol
+  #ssl_policy        = var.alb_listener_ssl_policy
+
+  default_action {
+    type             = "fixed-response"
+    fixed_response {
+      content_type = "text/plain"
+      message_body = "Dummy response"
+      status_code  = "200"
+    }
+  }
+}
+
+
 /*--------------- Route 53   ---------------*/
 
 resource "aws_route53_zone" "dev_route53_zone" {
