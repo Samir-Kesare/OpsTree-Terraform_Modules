@@ -59,7 +59,7 @@ resource "aws_instance" "standalone_server" {
   instance_type               = var.server_type
   key_name                    = aws_key_pair.key_pair.key_name
   subnet_id                   = var.subnet_id
-  associate_public_ip_address = false
+  associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sec_grp.id]
   tags = {
     Name        = "${var.server_name}-${count.index + 1}"
