@@ -19,8 +19,8 @@ variable "inbound_ports" {
   description = "List of inbound ports, protocols, and CIDR blocks or security group IDs"
   type        = list(map(any))
   default     = [
-    { port = 22, protocol = "TCP", cidr_blocks = "20.0.0.0/28" }, 
-    { port = 22, protocol = "TCP", security_group_ids = "sg-051aa66773d7b86c9" },
+    { port = 22, protocol = "TCP", cidr_blocks = "20.0.0.0/26" }, 
+    { port = 22, protocol = "TCP", security_group_ids = "sg-0c78f907a02b01dd4" },
   ]
 }
 
@@ -66,5 +66,11 @@ variable "server_name" {
 variable "instance_count" {
   description = "Number of instances to create"
   type        = number
-  default     = 1  
+  default     = 2  
 }
+
+variable "associate_public_ip" {
+  description = "Association of Public IP"
+  type        = bool
+  default     = "false"
+}  
