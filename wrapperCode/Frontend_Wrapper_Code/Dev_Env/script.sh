@@ -1,8 +1,8 @@
 #!/bin/bash
 
-alb_dns="dev-alb-228261188.us-east-1.elb.amazonaws.com"  # Change the DNS give actual DEV-ALB DNS
+new_url="dev-alb-228261188.us-east-1.elb.amazonaws.com"  # Change the DNS give actual DEV-ALB DNS
 # Modify package.json with the ALB DNS placeholder
-sed -i 's/"homepage": "https:\/\/opstree.github.io",/"homepage": "http:\/\/${alb_dns}",/' /home/ubuntu/Frontend/package.json
+sed -i 's/"homepage": "https:\/\/opstree.github.io",/"homepage": "http:\/\/${new_url}",/' /home/ubuntu/Frontend/package.json
 sed -i '/"proxy": "http:\/\/localhost:3000"/d' /home/ubuntu/Frontend/package.json
 
 ## Modify src directory
