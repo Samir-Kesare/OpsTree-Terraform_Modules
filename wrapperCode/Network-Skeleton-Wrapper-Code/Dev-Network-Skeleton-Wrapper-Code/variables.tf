@@ -318,6 +318,18 @@ variable "alb_tags" {
   }
 }
 
+/*--------------- Listner ---------------*/
+
+variable "alb_listener_port" {
+  description = "The port on which the ALB listens for incoming traffic."
+  type        = number
+}
+
+variable "alb_listener_protocol" {
+  description = "The protocol for routing traffic to the target."
+  type        = string
+}
+
 /*--------------- Route 53 ---------------*/
 
 variable "route53_zone_tags" {

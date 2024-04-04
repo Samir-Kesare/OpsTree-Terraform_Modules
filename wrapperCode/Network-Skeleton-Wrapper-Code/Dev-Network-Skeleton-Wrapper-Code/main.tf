@@ -35,6 +35,8 @@ module "network" {
   alb_type                       = var.alb_type
   alb_deletion_protection        = var.alb_deletion_protection
   alb_tags                       = var.alb_tags
+  alb_listener_port              = var.alb_listener_port
+  alb_listener_protocol          = var.alb_listener_port
   route53_zone_tags              = var.route53_zone_tags
   route53_zone_name              = var.route53_zone_name
 }
