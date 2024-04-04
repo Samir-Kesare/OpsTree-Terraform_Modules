@@ -20,11 +20,11 @@ variable "vpc_enable_dns_hostnames" {
 }
 
 variable "vpc_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-vpc"
+    Name       = "dev-vpc"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
@@ -51,13 +51,13 @@ variable "public_subnets_tags" {
   description = "public subnet tags"
   type        = list(map(string))
   default = [{
-    Name = "public-subnet-01"
+    Name       = "public-subnet-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
     }, {
-    Name = "public-subnet-02"
+    Name       = "public-subnet-02"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }]
 }
 
@@ -81,158 +81,158 @@ variable "private_subnets_tags" {
   description = "private subnet tags"
   type        = list(map(string))
   default = [{
-    Name = "frontend-subnet"
+    Name       = "frontend-subnet"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
     }, {
-    Name = "backend-subnet"
+    Name       = "backend-subnet"
     Enviroment = "dev"
-    Owner = "shreya"
-  }, {
-    Name = "database-subnet"
+    Owner      = "shreya"
+    }, {
+    Name       = "database-subnet"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }]
 }
 
 /*--------------- # Internet Gateway ---------------*/
 
 variable "igw_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-igw-01"
+    Name       = "dev-igw-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- # NAT Gateway ---------------*/
 
 variable "nat_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-nat-01"
+    Name       = "dev-nat-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- # Route Table ---------------*/
 
 variable "public_route_table_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-public-RTB-01"
+    Name       = "dev-public-RTB-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 variable "private_route_table_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-private-RTB-01"
+    Name       = "dev-private-RTB-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- Frontend NACL ---------------*/
 
 variable "frontend_nacl_ingress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "frontend_nacl_egress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "frontend_nacl_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-frontend-nacl-01"
+    Name       = "dev-frontend-nacl-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- Backend NACL ---------------*/
 
 variable "backend_nacl_ingress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "backend_nacl_egress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "backend_nacl_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-backend-nacl-01"
+    Name       = "dev-backend-nacl-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- Database NACL ---------------*/
 
 variable "db_nacl_ingress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "db_nacl_egress" {
-  type    = list(object({
-    rule_no = number
-    protocol = string
+  type = list(object({
+    rule_no    = number
+    protocol   = string
     cidr_block = string
-    from_port = number
-    to_port = number
-    action = string
+    from_port  = number
+    to_port    = number
+    action     = string
   }))
 }
 
 variable "db_nacl_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
-    Name = "dev-db-nacl-01"
+    Name       = "dev-db-nacl-01"
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
@@ -240,14 +240,14 @@ variable "db_nacl_tags" {
 
 variable "alb_sg_name" {
   description = "security group name"
-  type            = string
-  default         = "dev-alb-sg"
+  type        = string
+  default     = "dev-alb-sg"
 }
 
 variable "alb_sg_description" {
   description = "security group for Attendance API"
-  type            = string
-  default         = "Security group for Dev-ALB"
+  type        = string
+  default     = "Security group for Dev-ALB"
 }
 
 variable "alb_sg_inbound_rules" {
@@ -258,14 +258,14 @@ variable "alb_sg_inbound_rules" {
     protocol = string
   }))
   default = [{
-      port     = 80
-      source   = "0.0.0.0/0" 
-      protocol = "tcp"  
+    port     = 80
+    source   = "0.0.0.0/0"
+    protocol = "tcp"
     }, {
-      port     = 443
-      source   = "0.0.0.0/0" 
-      protocol = "tcp"  
-    }]
+    port     = 443
+    source   = "0.0.0.0/0"
+    protocol = "tcp"
+  }]
 }
 
 variable "alb_sg_outbound_rules" {
@@ -279,7 +279,7 @@ variable "alb_sg_outbound_rules" {
     {
       port     = 0 // allow all ports 
       source   = "0.0.0.0/0"
-      protocol = "-1"  // all protocols
+      protocol = "-1" // all protocols
     }
   ]
 }
@@ -287,7 +287,7 @@ variable "alb_sg_outbound_rules" {
 variable "alb_sg_tags" {
   description = "Tag for Attedance sg"
   type        = map(string)
-  default     = {
+  default = {
     Environment = "dev"
     Owner       = "shreya"
   }
@@ -295,39 +295,39 @@ variable "alb_sg_tags" {
 
 /*--------------- ALB ---------------*/
 variable "alb_name" {
-  type = string
+  type    = string
   default = "dev-alb"
 }
 variable "alb_internal" {
-  type = bool
-  default = false 
+  type    = bool
+  default = false
 }
 variable "alb_type" {
-  type = string
-  default = "application"  
+  type    = string
+  default = "application"
 }
 variable "alb_deletion_protection" {
-  type = bool
+  type    = bool
   default = true
 }
 variable "alb_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 
 /*--------------- Route 53 ---------------*/
 
 variable "route53_zone_tags" {
-  type    = map(string)
+  type = map(string)
   default = {
     Enviroment = "dev"
-    Owner = "shreya"
+    Owner      = "shreya"
   }
 }
 variable "route53_zone_name" {
-  type = string
+  type    = string
   default = "example.com"
 }

@@ -40,7 +40,7 @@ output "dev-db-nacl-id" {
 }
 
 output "alb-sg-id" {
-  value = module.network.alb-sg-id  
+  value = module.network.alb-sg-id
 }
 
 output "dev-alb-dns" {
