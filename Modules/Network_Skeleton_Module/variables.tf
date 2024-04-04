@@ -324,9 +324,9 @@ variable "alb_listener_port" {
   description = "The port on which the ALB listens for incoming traffic."
   type        = number
 }
-
+// expected protocol to be one of ["HTTP" "HTTPS" "TCP" "TLS" "UDP" "TCP_UDP" "GENEVE"]
 variable "alb_listener_protocol" {
-  description = "The protocol for routing traffic to the target."
+  description = "The protocol for routing traffic to the target. "
   type        = string
 }
 

@@ -5,7 +5,7 @@ vpc_tags = {
   Enviroment = "dev"
   Owner      = "harshit"
 }
-
+vpc_cidr = "10.0.0.0/25"
 /*--------------- Public Subnets ---------------*/
 public_subnets_cidr = ["10.0.0.0/28", "10.0.0.16/28"] # public subnets cidr
 
@@ -349,7 +349,8 @@ alb_tags = {
   Owner      = "harshit"
 }
 /*--------------- ALB listener ---------------*/
-
+alb_listener_port = 80
+alb_listener_protocol = "HTTP"
 /*--------------- Route 53 ---------------*/
 
 route53_zone_tags = {
