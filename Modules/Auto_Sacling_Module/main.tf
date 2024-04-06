@@ -128,6 +128,18 @@ resource "aws_autoscaling_group" "ASG" {
   target_group_arns     = [
     aws_lb_target_group.Target_group.arn
   ]
+
+  instance_refresh {
+    strategy = "Rolling"
+    preferences {
+      min_healthy_percentage = 100
+      instance_warmup = 300
+      max_healthy_percentage = 110
+      skip_matching = true
+    }
+    triggers = ["launch_template"]
+  }
+
   tag {
     key                 = var.tag_key
     value               = var.tag_value
