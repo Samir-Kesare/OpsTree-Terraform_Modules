@@ -24,6 +24,10 @@ output "Target_group_id" {
   value = [aws_lb_target_group.Target_group.id]
 }
 
+output "final_target_group_arn" {
+  value = local.final_target_group_arn
+}
+
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #--------------------------Configure Auto Scaling group ---------------------------#
 
