@@ -259,5 +259,5 @@ variable "target_value" {
 variable "target_group_arn" {
   description     = "existing target group arn if any"
   type            = string
-  default = ""
+  default = null
   }
