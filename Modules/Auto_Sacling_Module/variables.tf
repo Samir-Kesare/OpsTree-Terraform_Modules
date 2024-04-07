@@ -256,3 +256,7 @@ variable "target_value" {
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 
 
+variable "target_group_arn" {
+  description     = "existing target group arn if any"
+  type            = string
+  }

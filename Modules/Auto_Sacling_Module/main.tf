@@ -95,6 +95,9 @@ resource "aws_lb_target_group" "Target_group" {
 
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #------------------------------- Listener rule of ALB -----------------------------#
+locals {
+  final_target_group_arn = var.target_group_arn != null ? var.target_group_arn : aws_lb_target_group.Target_group.arn
+}
 
 resource "aws_lb_listener_rule" "path_rule" {
   listener_arn = var.listener_arn
@@ -102,7 +105,7 @@ resource "aws_lb_listener_rule" "path_rule" {
   
   action {
     type             = var.action_type
-    target_group_arn = aws_lb_target_group.Target_group.arn
+    target_group_arn = local.final_target_group_arn
   }
   
   condition {
@@ -126,7 +129,7 @@ resource "aws_autoscaling_group" "ASG" {
   desired_capacity      = var.desired_capacity
   vpc_zone_identifier   = var.subnet_ids
   target_group_arns     = [
-    aws_lb_target_group.Target_group.arn
+    local.final_target_group_arn
   ]
 
   instance_refresh {
