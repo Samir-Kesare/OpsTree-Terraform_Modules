@@ -1,5 +1,5 @@
 module"Dev_Salary" {
-source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=main"
+source                              = "git@github.com:CodeOps-Hub/Terraform-modules.git//Modules/Auto_Sacling_Module?ref=harshit/rolling-module"
 #---------------------------------Security Group ----------------------------------#
 security_name                       = var.Dev_Salary_security_name
 Security_description                = var.Dev_Salary_security_description
