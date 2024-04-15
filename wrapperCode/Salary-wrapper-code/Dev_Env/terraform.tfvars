@@ -56,7 +56,7 @@ Dev_Salary_priority                              = 105
 #--------------------------Configure Auto Scaling group ---------------------------#
 
 Dev_Salary_autoscaling_group_name              = "Dev_Salary_ASG"
-Dev_Salary_ASG_vserion                         = "$Latest"
+Dev_Salary_ASG_vserion                         = "2"
 Dev_Salary_min_size                            = 1
 Dev_Salary_max_size                            = 2
 Dev_Salary_desired_capacity                    = 1
