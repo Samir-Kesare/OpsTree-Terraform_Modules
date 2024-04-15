@@ -1,5 +1,4 @@
- #!/bin/bash  
- #!/bin/bash
+#!/bin/bash
 
 sed -i 's/65\.2\.142\.186/10.0.0.7/g' /home/ubuntu/OT-Salary/migration.json # Change Scylla IP
 
