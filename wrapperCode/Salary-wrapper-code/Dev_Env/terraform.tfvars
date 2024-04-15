@@ -1,7 +1,7 @@
 #---------------------------------Security Group ----------------------------------#
 
-Dev_Salary_security_name                       = "Dev-Dev_Salary-sg"
-Dev_Salary_security_description                = "Security group for Dev-Dev_Salary-API"
+Dev_Salary_security_name                       = "Dev_Salary-sg"
+Dev_Salary_security_description                = "Security group for Dev_Salary-API"
 Dev_Salary_SG_vpc_id                           = "vpc-007fd0dab685edb84"    #Dev-VPC-ID
 Dev_Salary_inbound_ports                       = [
   { port                                = 22, protocol = "tcp", cidr_blocks = "20.0.0.0/28" },                     # Management VPC Cidr Block
@@ -12,7 +12,7 @@ Dev_Salary_outbound_ports                      = [
   { port                                = 0, protocol = "-1", cidr_blocks = "0.0.0.0/0" }
 ]
 Dev_Salary_Sg_tags                             = {
-  Name                                  = "Dev-Dev_Salary-sg"
+  Name                                  = "Dev_Salary-sg"
   Enviroment                            = "Dev_Salary"
   Owner                                 = "Vishal"
 }
@@ -22,8 +22,8 @@ Dev_Salary_Sg_tags                             = {
 
 Dev_Salary_private_key_algorithm               = "RSA"
 Dev_Salary_private_key_rsa_bits                = 4096
-Dev_Salary_template_name                       = "Dev-Dev_Salary-template"
-Dev_Salary_template_description                = "Template for Dev-Dev_Salary"
+Dev_Salary_template_name                       = "Dev_Salary-template"
+Dev_Salary_template_description                = "Template for Dev_Salary"
 Dev_Salary_AMI_ID                              = "ami-059b22fedfcb93a25"
 Dev_Salary_instance_type                       = "t2.medium"
 Dev_Salary_instance_keypair                    = "Dev_Salary_Key"
@@ -33,7 +33,7 @@ Dev_Salary_user_data_script_path               = "./script.sh"
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #--------------------------------- Target Group -----------------------------------#
 
-Dev_Salary_target_group_name                   = "Dev-Dev_Salary-TG"
+Dev_Salary_target_group_name                   = "Dev_Salary-TG"
 Dev_Salary_target_group_port                   = 8080
 Dev_Salary_target_group_protocol               = "HTTP"
 Dev_Salary_TG_vpc_id                           = "vpc-007fd0dab685edb84"   #Dev-VPC-ID
@@ -55,14 +55,14 @@ Dev_Salary_priority                              = 105
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #--------------------------Configure Auto Scaling group ---------------------------#
 
-Dev_Salary_autoscaling_group_name              = "Dev-Dev_Salary_ASG"
+Dev_Salary_autoscaling_group_name              = "Dev_Salary_ASG"
 Dev_Salary_ASG_vserion                         = "$Latest"
 Dev_Salary_min_size                            = 1
 Dev_Salary_max_size                            = 2
 Dev_Salary_desired_capacity                    = 1
-Dev_Salary_subnet_ids                          = ["subnet-09fcc50eed3fadec9" ]   #Dev-Dev_Salary Pvt ID
+Dev_Salary_subnet_ids                          = ["subnet-09fcc50eed3fadec9" ]   #Dev_Salary Pvt ID
 Dev_Salary_tag_key                             = "Name"
-Dev_Salary_tag_value                           = "Dev-Dev_Salary"
+Dev_Salary_tag_value                           = "Dev_Salary"
 Dev_Salary_propagate_at_launch                 = true
 
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
