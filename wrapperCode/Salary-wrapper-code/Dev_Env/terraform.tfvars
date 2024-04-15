@@ -33,7 +33,7 @@ Dev_Salary_user_data_script_path               = "./script.sh"
 #-----------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -----------------------#
 #--------------------------------- Target Group -----------------------------------#
 
-Dev_Salary_target_group_name                   = "Dev_Salary-TG"
+Dev_Salary_target_group_name                   = "Dev_Salary_TG"
 Dev_Salary_target_group_port                   = 8080
 Dev_Salary_target_group_protocol               = "HTTP"
 Dev_Salary_TG_vpc_id                           = "vpc-007fd0dab685edb84"   #Dev-VPC-ID
