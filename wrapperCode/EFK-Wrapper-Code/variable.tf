@@ -1,12 +1,12 @@
 variable "sec-grp-name" {
   description     = "Name of the security group"
   type            = string
-  default         = "redis-sg"
+  default         = "efk-sg"
 }
 variable "sec-grp-description" {
   description     = "Description for the security group"
   type            = string
-  default         = "Security group for Redis in Dev Env"
+  default         = "Security group for EFK Server in Management Env"
 }
 variable "vpc-id" {
   description     = "ID of the VPC for instances"
@@ -32,8 +32,8 @@ variable "outbound-ports" {
 variable "sec-grp-tags" {
   type            = map(string)
   default         = {
-    Name          = "redis-sg"
-    Enviroment    = "Dev"
+    Name          = "efk-sg"
+    Enviroment    = "Management"
     Owner         = "Aakash"
   }
 }
@@ -44,16 +44,16 @@ variable "key-name" {
 }
 
 variable "server-type" {
-  description = "Instance type for redis server"
+  description = "Instance type for efk server"
   type        = string
 }
 
 variable "subnet-id" {
-  description = "Id of the subnet for the redis server"
+  description = "Id of the subnet for the efk server"
   type        = string
 }
 
 variable "server-name" {
-  description = "Name tag for the redis server"
+  description = "Name tag for the efk server"
   type        = string
 }
