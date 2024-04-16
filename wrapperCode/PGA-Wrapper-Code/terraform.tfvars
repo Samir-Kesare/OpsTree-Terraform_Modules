@@ -1,7 +1,7 @@
-vpc-id              = "vpc-0624da13cb0782e79"
+vpc-id              = "vpc-037273df63a16de65"
 key-name            = "pgaServerKey"
 server-type         = "t2.medium"
-subnet-id           = "subnet-0585fe1af0dbe43ec"
+subnet-id           = "subnet-029ac81220960564f"
 sec-grp-name = "pga-sg"
 sec-grp-tags = {
     Name          = "pga-sg"
@@ -10,13 +10,13 @@ sec-grp-tags = {
 }
 server-name         = "PGA Server"
 inbound-ports = [ {
-  port = 9090 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
+  port = 9090 , protocol = "tcp" , security_group_ids = "sg-05a6ffc3303fb3208"
 },
 {
- port = 3000 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
+ port = 3000 , protocol = "tcp" , security_group_ids = "sg-05a6ffc3303fb3208"
 },
 {
- port = 9093 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
+ port = 9093 , protocol = "tcp" , security_group_ids = "sg-05a6ffc3303fb3208"
 },
 {
  port = 24224 , protocol = "tcp" , cidr_blocks = "10.0.0.0/25"
