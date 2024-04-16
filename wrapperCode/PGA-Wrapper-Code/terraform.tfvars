@@ -10,13 +10,13 @@ sec-grp-tags = {
 }
 server-name         = "PGA Server"
 inbound-ports = [ {
-  port = 9090 , protocol = "tcp" , security_group_ids = "sg-01bebc628cc635081"
+  port = 9090 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
 },
 {
- port = 3000 , protocol = "tcp" , security_group_ids = "sg-01bebc628cc635081"
+ port = 3000 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
 },
 {
- port = 9093 , protocol = "tcp" , security_group_ids = "sg-01bebc628cc635081"
+ port = 9093 , protocol = "tcp" , security_group_ids = "sg-096169f05a62a20cf"
 },
 {
  port = 24224 , protocol = "tcp" , cidr_blocks = "10.0.0.0/25"
