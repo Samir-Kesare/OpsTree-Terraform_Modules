@@ -8,7 +8,7 @@ sec-grp-tags = {
     Enviroment    = "Management"
     Owner         = "Shantanu"
 }
-server-name         = "EFK Server"
+server-name         = "PGA Server"
 inbound-ports = [ {
   port = 9090 , protocol = "tcp" , security_group_ids = "sg-01bebc628cc635081"
 },
