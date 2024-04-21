@@ -153,8 +153,8 @@ resource "aws_lb_listener_rule" "green_path_based_routing" {
       }
 
       stickiness {
-        enabled  = false
-        duration = 1
+        enabled  = var.enable_tg_stickiness
+        duration = var.tg_stickiness_duration
       }
     }
   }

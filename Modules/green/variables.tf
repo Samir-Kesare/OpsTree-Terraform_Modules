@@ -250,3 +250,12 @@ variable "listener_rule_priority" {
 variable "path_pattern" {
   type        = string
 }
+
+variable "enable_tg_stickiness" {
+  type        = string
+}
+
+variable "tg_stickiness_duration" {
+  type        = number
+}
+
