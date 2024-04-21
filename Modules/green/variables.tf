@@ -35,10 +35,10 @@ variable "traffic_distribution" {
   type        = string
 }
 
-variable "alb_arn" {
-  description = "Levels of traffic distribution"
-  type        = string
-}
+# variable "alb_arn" {
+#   description = "Levels of traffic distribution"
+#   type        = string
+# }
 
 variable "blue_tg_arn" {
   description = "Levels of traffic distribution"
