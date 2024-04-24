@@ -56,8 +56,8 @@ Dev_Attendance_priority                              = 108
 #--------------------------Configure Auto Scaling group ---------------------------#
 
 Dev_Attendance_autoscaling_group_name              = "Dev_Attendance_ASG"
-#Dev_Attendance_ASG_vserion                         = "1"
-Dev_Attendance_ASG_vserion                         ="$Latest"
+Dev_Attendance_ASG_vserion                         = "2"
+#Dev_Attendance_ASG_vserion                         ="$Latest"
 Dev_Attendance_min_size                            = 1
 Dev_Attendance_max_size                            = 2
 Dev_Attendance_desired_capacity                    = 1
